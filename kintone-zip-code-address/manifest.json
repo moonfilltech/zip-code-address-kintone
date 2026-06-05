@@ -13,7 +13,7 @@
   "icon": "img/icon.png",
   "homepage_url": {
       "ja": "https://github.com/moonfilltech/zip-code-address-kintone",
-      "en": "https://github.com/moonfilltech/zip-code-address-kintone",
+      "en": "https://github.com/moonfilltech/zip-code-address-kintone"
   },
   "desktop": {
     "js": [
