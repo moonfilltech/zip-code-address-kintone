@@ -101,8 +101,12 @@ function getMyTextFields() {
 
 function setDefaults(values) {
   var outer = kintone.plugin.app.getConfig(PLUGIN_ID);
-  if (outer.length == 0 || outer.length == 'undefined') {
-    console.log("Init");   
+  var outerJSON = outer.config || '{}';
+  var storedData = JSON.parse(outerJSON);
+
+  console.log('storedData.length', storedData.length)
+  if (Object.keys(storedData).length === 0) {
+    console.log("Init");
     var data = {
       myzipZipCode_options: values[0],
       myzipAddress_options: values[0],
@@ -121,7 +125,6 @@ function setDefaults(values) {
       myzipAddress_options: values[0],
       myzipButton_options: values[1]
     }
-    var storedData = JSON.parse(outer.config);
     data.data = storedData.data;
   }
 
